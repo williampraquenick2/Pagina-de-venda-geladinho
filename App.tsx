@@ -1,16 +1,16 @@
 
 import React from 'react';
-import Hero from './components/Hero';
-import Authority from './components/Authority';
-import Benefits from './components/Benefits';
-import Content from './components/Content';
-import Bonus from './components/Bonus';
-import Offer from './components/Offer';
-import Guarantee from './components/Guarantee';
-import FAQ from './components/FAQ';
-import CTA from './components/CTA';
-import AIFlavorAssistant from './components/AIFlavorAssistant';
-import Testimonials from './components/Testimonials';
+import Hero from './components/Hero.tsx';
+import Authority from './components/Authority.tsx';
+import Benefits from './components/Benefits.tsx';
+import Content from './components/Content.tsx';
+import Bonus from './components/Bonus.tsx';
+import Offer from './components/Offer.tsx';
+import Guarantee from './components/Guarantee.tsx';
+import FAQ from './components/FAQ.tsx';
+import CTA from './components/CTA.tsx';
+import AIFlavorAssistant from './components/AIFlavorAssistant.tsx';
+import Testimonials from './components/Testimonials.tsx';
 
 const App: React.FC = () => {
   return (
