@@ -7,9 +7,9 @@ const Guarantee: React.FC = () => {
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
         <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
           <img 
-            src="https://picsum.photos/seed/guarantee/400/400" 
+            src="https://i.imgur.com/0cxpI23.png" 
             alt="7 Dias de Garantia" 
-            className="rounded-full shadow-2xl border-4 border-yellow-400"
+            className="w-full h-full object-contain drop-shadow-2xl"
           />
         </div>
         <div className="text-center md:text-left">

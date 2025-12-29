@@ -3,7 +3,10 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   const scrollToOffer = () => {
-    document.getElementById('offer')?.scrollIntoView({ behavior: 'smooth' });
+    const offerElement = document.getElementById('offer-card');
+    if (offerElement) {
+      offerElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   };
 
   return (
@@ -28,7 +31,7 @@ const Hero: React.FC = () => {
           <strong> sacolés alcoólicos</strong> e colocar dinheiro no bolso rapidamente.
         </p>
 
-        {/* New Image Added Here */}
+        {/* Hero Image */}
         <div className="mb-10 max-w-lg mx-auto transform hover:scale-105 transition-transform duration-500">
           <img 
             src="https://i.imgur.com/PhP1qAO.jpeg" 
@@ -40,7 +43,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-4">
           <button 
             onClick={scrollToOffer}
-            className="w-full md:w-auto px-10 py-5 bg-white text-pink-600 font-black text-xl rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 uppercase tracking-wide"
+            className="w-full md:w-auto px-10 py-5 bg-white text-pink-600 font-black text-xl rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 uppercase tracking-wide cursor-pointer"
           >
             Quero lucrar no carnaval
           </button>

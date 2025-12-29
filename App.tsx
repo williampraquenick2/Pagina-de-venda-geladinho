@@ -9,7 +9,6 @@ import Offer from './components/Offer.tsx';
 import Guarantee from './components/Guarantee.tsx';
 import FAQ from './components/FAQ.tsx';
 import CTA from './components/CTA.tsx';
-import AIFlavorAssistant from './components/AIFlavorAssistant.tsx';
 import Testimonials from './components/Testimonials.tsx';
 
 const App: React.FC = () => {
@@ -20,7 +19,6 @@ const App: React.FC = () => {
       <Benefits />
       <Content />
       <Testimonials />
-      <AIFlavorAssistant />
       <Bonus />
       <Offer />
       <Guarantee />

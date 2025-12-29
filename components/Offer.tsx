@@ -5,7 +5,7 @@ const Offer: React.FC = () => {
   return (
     <section id="offer" className="py-20 px-4 bg-gray-900 text-white">
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white text-gray-900 rounded-[3rem] p-8 md:p-16 text-center shadow-2xl relative overflow-hidden">
+        <div id="offer-card" className="bg-white text-gray-900 rounded-[3rem] p-8 md:p-16 text-center shadow-2xl relative overflow-hidden scroll-mt-20">
           <div className="absolute top-0 left-0 w-full h-2 carnival-gradient"></div>
           
           <h2 className="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tight leading-none">Oferta de Lançamento</h2>
@@ -38,9 +38,12 @@ const Offer: React.FC = () => {
             </li>
           </ul>
 
-          <button className="w-full bg-pink-600 text-white font-black py-6 rounded-2xl text-2xl md:text-3xl uppercase shadow-xl hover:bg-pink-700 hover:scale-[1.02] transition-all mb-6">
+          <a 
+            href="https://pay.cakto.com.br/q5n674x_703600"
+            className="block w-full bg-pink-600 text-white font-black py-6 rounded-2xl text-2xl md:text-3xl uppercase shadow-xl hover:bg-pink-700 hover:scale-[1.02] transition-all mb-6 text-center no-underline"
+          >
             Quero começar agora!
-          </button>
+          </a>
 
           <div className="flex items-center justify-center gap-4 opacity-50">
             <img src="https://picsum.photos/id/1/40/25" alt="Mastercard" className="grayscale h-6" />
