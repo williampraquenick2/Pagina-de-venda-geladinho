@@ -4,7 +4,6 @@ import React from 'react';
 const Offer: React.FC = () => {
   const handlePurchaseClick = () => {
     // Rastreia o evento de clique no botão de compra se o pixel estiver carregado
-    // Fix: cast window to any to avoid TypeScript error for the external fbq property not defined on window
     if (typeof (window as any).fbq === 'function') {
       (window as any).fbq('track', 'InitiateCheckout');
     }
