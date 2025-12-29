@@ -2,6 +2,14 @@
 import React from 'react';
 
 const Offer: React.FC = () => {
+  const handlePurchaseClick = () => {
+    // Rastreia o evento de clique no botão de compra se o pixel estiver carregado
+    // Fix: cast window to any to avoid TypeScript error for the external fbq property not defined on window
+    if (typeof (window as any).fbq === 'function') {
+      (window as any).fbq('track', 'InitiateCheckout');
+    }
+  };
+
   return (
     <section id="offer" className="py-20 px-4 bg-gray-900 text-white">
       <div className="max-w-4xl mx-auto">
@@ -40,6 +48,7 @@ const Offer: React.FC = () => {
 
           <a 
             href="https://pay.cakto.com.br/q5n674x_703600"
+            onClick={handlePurchaseClick}
             className="block w-full bg-pink-600 text-white font-black py-6 rounded-2xl text-2xl md:text-3xl uppercase shadow-xl hover:bg-pink-700 hover:scale-[1.02] transition-all mb-6 text-center no-underline"
           >
             Quero começar agora!
