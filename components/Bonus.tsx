@@ -8,7 +8,7 @@ const Bonus: React.FC = () => {
     { title: "🎁 Guia de Pontos de Venda", val: 37, desc: "Onde se posicionar em cada tipo de evento para máxima visibilidade." },
     { title: "🎁 Script de Abordagem Mestre", val: 37, desc: "O que dizer para convencer grupos grandes a comprarem de você." },
     { title: "🎁 Guia de Embalagens Criativas", val: 27, desc: "Como deixar seu produto irresistível visualmente sem gastar muito." },
-    { title: "🎁 Comunidade VIP 2026", val: 97, desc: "Acesso ao grupo de suporte para trocar experiências com outros vendedores." }
+    { title: "🎁 Comunidade VIP 2027", val: 97, desc: "Acesso ao grupo de suporte para trocar experiências com outros vendedores." }
   ];
 
   const totalValue = bonuses.reduce((acc, curr) => acc + curr.val, 0);

@@ -27,7 +27,7 @@ const App: React.FC = () => {
       
       <footer className="bg-gray-900 text-white py-8 text-center px-4">
         <p className="text-sm opacity-60">
-          © 2026 Sacolé Lucrativo™. Todos os direitos reservados.
+          © 2027 Sacolé Lucrativo™. Todos os direitos reservados.
           <br />
           Os resultados podem variar de pessoa para pessoa. O sucesso depende da sua dedicação.
         </p>

@@ -10,7 +10,7 @@ const CTA: React.FC = () => {
     <div className="sticky bottom-0 w-full bg-white/80 backdrop-blur-md border-t border-gray-100 p-4 md:p-6 z-50 flex flex-col md:flex-row items-center justify-between gap-4">
       <div className="hidden md:block">
         <p className="font-black text-gray-900 text-xl uppercase">Sacolé Lucrativo™ <span className="text-pink-600 text-sm ml-2">vagas limitadas</span></p>
-        <p className="text-sm text-gray-500">Carnaval 2026: Comece seu lucro hoje!</p>
+        <p className="text-sm text-gray-500">Carnaval 2027: Comece seu lucro hoje!</p>
       </div>
       <button 
         onClick={scrollToOffer}

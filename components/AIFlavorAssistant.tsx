@@ -14,7 +14,7 @@ const AIFlavorAssistant: React.FC = () => {
     setIsLoading(true);
     try {
       const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-      const prompt = `Como um mestre de vendas ambulantes especializado em sacolés alcoólicos para o Carnaval 2026, sugira uma receita criativa e um script de vendas de impacto para a cidade de ${city} usando ${favoriteFruit}. O tom deve ser animado, persuasivo e focado em lucro rápido. Retorne em Markdown.`;
+      const prompt = `Como um mestre de vendas ambulantes especializado em sacolés alcoólicos para o Carnaval 2027, sugira uma receita criativa e um script de vendas de impacto para a cidade de ${city} usando ${favoriteFruit}. O tom deve ser animado, persuasivo e focado em lucro rápido. Retorne em Markdown.`;
       
       const response = await ai.models.generateContent({
         model: 'gemini-3-flash-preview',
@@ -36,7 +36,7 @@ const AIFlavorAssistant: React.FC = () => {
         <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border-4 border-pink-200">
           <div className="text-center mb-10">
             <span className="bg-pink-100 text-pink-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider mb-4 inline-block">Bônus: Assistente de IA</span>
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 uppercase">IA: Flavor Master 2026</h2>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-4 uppercase">IA: Flavor Master 2027</h2>
             <p className="text-gray-600">Dê uma amostra do que a tecnologia pode fazer pelo seu negócio. Insira sua cidade e uma fruta!</p>
           </div>
 
