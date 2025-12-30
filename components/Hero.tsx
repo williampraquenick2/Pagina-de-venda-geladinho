@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Hero: React.FC = () => {
@@ -19,7 +18,7 @@ const Hero: React.FC = () => {
 
       <div className="max-w-5xl mx-auto text-center relative z-10 text-white">
         <div className="inline-block bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold mb-6 animate-bounce shadow-lg uppercase tracking-wider">
-          🔥 Carnaval 2027: Sua chance é agora
+          🔥 Carnaval 2026: Sua chance é agora
         </div>
         
         <h1 className="text-4xl md:text-7xl font-black mb-6 leading-tight drop-shadow-md">

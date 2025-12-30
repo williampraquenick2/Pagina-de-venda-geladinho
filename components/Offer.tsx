@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Offer: React.FC = () => {
@@ -10,7 +9,7 @@ const Offer: React.FC = () => {
           
           <h2 className="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tight leading-none">Oferta de Lançamento</h2>
           <p className="text-xl mb-10 text-gray-600 max-w-2xl mx-auto">
-            Este material é atualizado para o Carnaval 2027. O acesso com este valor é <strong>extremamente limitado</strong>.
+            Este material é atualizado para o Carnaval 2026. O acesso com este valor é <strong>extremamente limitado</strong>.
           </p>
 
           <div className="mb-10">
