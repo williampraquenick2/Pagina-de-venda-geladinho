@@ -1,9 +1,8 @@
-
 import React from 'react';
 
 const Offer: React.FC = () => {
   const handlePurchaseClick = () => {
-    // Rastreia o evento de clique no botão de compra se o pixel estiver carregado
+    // Dispara o evento de InitiateCheckout no Facebook Pixel
     if (typeof (window as any).fbq === 'function') {
       (window as any).fbq('track', 'InitiateCheckout');
     }
