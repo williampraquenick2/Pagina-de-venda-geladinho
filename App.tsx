@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Hero from './components/Hero.tsx';
 import Authority from './components/Authority.tsx';
@@ -9,6 +10,7 @@ import Guarantee from './components/Guarantee.tsx';
 import FAQ from './components/FAQ.tsx';
 import CTA from './components/CTA.tsx';
 import Testimonials from './components/Testimonials.tsx';
+import AIFlavorAssistant from './components/AIFlavorAssistant.tsx';
 
 const App: React.FC = () => {
   return (
@@ -18,17 +20,18 @@ const App: React.FC = () => {
       <Benefits />
       <Content />
       <Testimonials />
+      <AIFlavorAssistant />
       <Bonus />
       <Offer />
       <Guarantee />
       <FAQ />
       <CTA />
       
-      <footer className="bg-gray-900 text-white py-8 text-center px-4">
-        <p className="text-sm opacity-60">
+      <footer className="bg-gray-900 text-white py-12 text-center px-6">
+        <p className="text-xs md:text-sm opacity-60 max-w-2xl mx-auto leading-relaxed">
           © 2026 Sacolé Lucrativo™. Todos os direitos reservados.
-          <br />
-          Os resultados podem variar de pessoa para pessoa. O sucesso depende da sua dedicação.
+          <br className="hidden md:block" />
+          Os resultados podem variar de pessoa para pessoa. O sucesso depende da sua dedicação e execução do método.
         </p>
       </footer>
     </div>
