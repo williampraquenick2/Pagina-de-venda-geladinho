@@ -3,7 +3,7 @@ import React from 'react';
 
 const Content: React.FC = () => {
   const modules = [
-    { title: "🍹 10 receitas alcoólicas", desc: "As combinações que mais vendem no Carnaval." },
+    { title: "🍹 +30 receitas alcoólicas", desc: "As combinações que mais vendem no Carnaval." },
     { title: "💵 Precificação Lucrativa", desc: "Como cobrar para cobrir custos e ter lucro real." },
     { title: "🛒 Onde Comprar Barato", desc: "Dicas para economizar nos ingredientes." },
     { title: "📍 Pontos Estratégicos", desc: "Onde e quando estar para vender tudo." },
