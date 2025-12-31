@@ -31,12 +31,12 @@ const Hero: React.FC = () => {
           <strong> sacolés alcoólicos</strong> e colocar dinheiro no bolso rapidamente.
         </p>
 
-        {/* Hero Image */}
-        <div className="mb-8 md:mb-10 max-w-sm md:max-w-lg mx-auto transform hover:scale-105 transition-transform duration-500 px-4">
+        {/* Hero Image - Ajustado para exibir inteira */}
+        <div className="mb-8 md:mb-10 max-w-sm md:max-w-xl mx-auto transform hover:scale-105 transition-transform duration-500 px-4">
           <img 
             src="https://i.imgur.com/PhP1qAO.jpeg" 
             alt="Sacolés Alcoólicos Lucrativos" 
-            className="rounded-[2rem] md:rounded-[2.5rem] shadow-2xl border-4 md:border-8 border-white/10 w-full object-cover aspect-video"
+            className="rounded-[2rem] md:rounded-[2.5rem] shadow-2xl border-4 md:border-8 border-white/20 w-full h-auto object-contain bg-white/5"
           />
         </div>
 

@@ -70,31 +70,31 @@ const Authority: React.FC = () => {
                 </div>
               </div>
 
-              {/* Image Carousel */}
-              <div className="relative group overflow-hidden rounded-2xl shadow-lg aspect-video md:aspect-[21/9]">
+              {/* Image Carousel - Ajustado para exibir imagens inteiras */}
+              <div className="relative group overflow-hidden rounded-2xl shadow-lg aspect-square sm:aspect-video bg-gray-50 border border-gray-100">
                 <div 
                   className="flex transition-transform duration-700 ease-in-out h-full"
                   style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 >
                   {images.map((img, idx) => (
-                    <div key={idx} className="min-w-full h-full">
+                    <div key={idx} className="min-w-full h-full flex items-center justify-center p-2">
                       <img 
                         src={img} 
                         alt={`Sacolé Exemplo ${idx + 1}`} 
-                        className="w-full h-full object-cover"
+                        className="max-w-full max-h-full object-contain rounded-xl"
                       />
                     </div>
                   ))}
                 </div>
                 
                 {/* Dots Navigation */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
                   {images.map((_, idx) => (
                     <button
                       key={idx}
                       onClick={() => setCurrentSlide(idx)}
                       className={`w-2.5 h-2.5 rounded-full transition-all ${
-                        currentSlide === idx ? 'bg-white w-6' : 'bg-white/50'
+                        currentSlide === idx ? 'bg-pink-600 w-6' : 'bg-pink-200'
                       }`}
                       aria-label={`Go to slide ${idx + 1}`}
                     />
