@@ -31,18 +31,24 @@ const Hero: React.FC = () => {
           <strong> sacolés alcoólicos</strong> e colocar dinheiro no bolso rapidamente.
         </p>
 
-        {/* Hero Video - Ajustado para usar o link de incorporação do Vimeo baseado no ID fornecido */}
-        <div className="mb-8 md:mb-10 max-w-sm md:max-w-2xl mx-auto transform hover:scale-[1.02] transition-transform duration-500 px-4">
-          <div className="aspect-video w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white/20 bg-black/20">
+        {/* Hero Video - Configurado para Autoplay com Áudio e Sem Controles */}
+        <div className="mb-8 md:mb-10 max-w-sm md:max-w-2xl mx-auto transform hover:scale-[1.01] transition-transform duration-500 px-4 relative">
+          <div className="aspect-video w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white/20 bg-black/20 relative">
+            
+            {/* Camada Invisível para bloquear interação (impedir pausa/avanço) */}
+            <div className="absolute inset-0 z-20 cursor-default"></div>
+
             <iframe 
-              src="https://player.vimeo.com/video/1150857918" 
-              className="w-full h-full"
+              src="https://player.vimeo.com/video/1150857918?autoplay=1&muted=0&loop=1&controls=0&autopause=0&app_id=58479" 
+              className="w-full h-full scale-[1.05]" 
               frameBorder="0" 
-              allow="autoplay; fullscreen" 
-              allowFullScreen
-              title="Sacolé Lucrativo™ - Vídeo"
+              allow="autoplay; fullscreen; picture-in-picture" 
+              title="Sacolé Lucrativo™ - Vídeo Institucional"
             ></iframe>
           </div>
+          <p className="mt-3 text-[10px] uppercase tracking-widest font-bold opacity-60">
+            Aumente o volume e assista ao método 🔊
+          </p>
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 px-4">
