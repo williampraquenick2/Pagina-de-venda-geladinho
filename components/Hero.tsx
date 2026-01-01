@@ -1,12 +1,18 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 
 const Hero: React.FC = () => {
+  const [isMuted, setIsMuted] = useState(true);
+
   const scrollToOffer = () => {
     const offerElement = document.getElementById('offer-card');
     if (offerElement) {
       offerElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
+  };
+
+  const toggleAudio = () => {
+    setIsMuted(false);
   };
 
   return (
@@ -31,23 +37,37 @@ const Hero: React.FC = () => {
           <strong> sacolés alcoólicos</strong> e colocar dinheiro no bolso rapidamente.
         </p>
 
-        {/* Hero Video - Configurado para Autoplay com Áudio e Sem Controles */}
-        <div className="mb-8 md:mb-10 max-w-sm md:max-w-2xl mx-auto transform hover:scale-[1.01] transition-transform duration-500 px-4 relative">
+        {/* Hero Video Container */}
+        <div className="mb-8 md:mb-10 max-w-sm md:max-w-2xl mx-auto transform hover:scale-[1.01] transition-transform duration-500 px-4 relative group">
           <div className="aspect-video w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white/20 bg-black/20 relative">
             
             {/* Camada Invisível para bloquear interação (impedir pausa/avanço) */}
             <div className="absolute inset-0 z-20 cursor-default"></div>
 
+            {/* Botão de Ativar Áudio - Aparece apenas se estiver mudo */}
+            {isMuted && (
+              <button 
+                onClick={toggleAudio}
+                className="absolute inset-0 z-30 flex items-center justify-center bg-black/40 hover:bg-black/20 transition-colors group/btn"
+              >
+                <div className="bg-white text-pink-600 px-6 py-3 rounded-full font-black text-sm md:text-base uppercase shadow-2xl flex items-center gap-3 animate-pulse group-hover/btn:scale-110 transition-transform">
+                  <span className="text-xl">🔊</span>
+                  Clique para Ativar o Áudio
+                </div>
+              </button>
+            )}
+
             <iframe 
-              src="https://player.vimeo.com/video/1150857918?autoplay=1&muted=0&loop=1&controls=0&autopause=0&app_id=58479" 
+              src={`https://player.vimeo.com/video/1150857918?autoplay=1&muted=${isMuted ? '1' : '0'}&loop=1&controls=0&autopause=0&background=${isMuted ? '1' : '0'}&app_id=58479`} 
               className="w-full h-full scale-[1.05]" 
               frameBorder="0" 
               allow="autoplay; fullscreen; picture-in-picture" 
               title="Sacolé Lucrativo™ - Vídeo Institucional"
             ></iframe>
           </div>
+          
           <p className="mt-3 text-[10px] uppercase tracking-widest font-bold opacity-60">
-            Aumente o volume e assista ao método 🔊
+            {isMuted ? "Vídeo iniciando sem áudio... clique para ouvir!" : "Áudio ativado! Aproveite o conteúdo 🔊"}
           </p>
         </div>
 
