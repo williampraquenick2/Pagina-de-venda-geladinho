@@ -23,7 +23,7 @@ const AIFlavorAssistant: React.FC = () => {
               Veja aqui uma amostra do que você vai <span className="text-pink-600">receber no ebook</span>
             </h2>
             <p className="text-gray-700 font-bold max-w-xl mx-auto leading-tight">
-              Abaixo está uma versão reduzida de uma das nossas receitas virais. No Ebook completo você terá acesso a <span className="text-pink-600">+30 estratégias completas.</span>
+              Abaixo está uma version reduzida de uma das nossas receitas virais. No Ebook completo você terá acesso a <span className="text-pink-600">+30 estratégias completas.</span>
             </p>
           </div>
 
@@ -143,7 +143,7 @@ const AIFlavorAssistant: React.FC = () => {
                       onClick={scrollToOffer}
                       className="w-full bg-pink-600 text-white py-4 rounded-2xl font-black text-base uppercase tracking-widest hover:bg-pink-700 transition-all shadow-lg animate-pulse"
                     >
-                      Quero o Ebook por R$ 19,90
+                      Quero o Ebook por R$ 14,90
                     </button>
                   </div>
                 </div>

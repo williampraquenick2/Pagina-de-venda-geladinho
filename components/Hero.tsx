@@ -31,13 +31,18 @@ const Hero: React.FC = () => {
           <strong> sacolés alcoólicos</strong> e colocar dinheiro no bolso rapidamente.
         </p>
 
-        {/* Hero Image - Ajustado para exibir inteira */}
-        <div className="mb-8 md:mb-10 max-w-sm md:max-w-xl mx-auto transform hover:scale-105 transition-transform duration-500 px-4">
-          <img 
-            src="https://i.imgur.com/PhP1qAO.jpeg" 
-            alt="Sacolés Alcoólicos Lucrativos" 
-            className="rounded-[2rem] md:rounded-[2.5rem] shadow-2xl border-4 md:border-8 border-white/20 w-full h-auto object-contain bg-white/5"
-          />
+        {/* Hero Video - Ajustado para usar o link de incorporação do Vimeo baseado no ID fornecido */}
+        <div className="mb-8 md:mb-10 max-w-sm md:max-w-2xl mx-auto transform hover:scale-[1.02] transition-transform duration-500 px-4">
+          <div className="aspect-video w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white/20 bg-black/20">
+            <iframe 
+              src="https://player.vimeo.com/video/1150857918" 
+              className="w-full h-full"
+              frameBorder="0" 
+              allow="autoplay; fullscreen" 
+              allowFullScreen
+              title="Sacolé Lucrativo™ - Vídeo"
+            ></iframe>
+          </div>
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 px-4">

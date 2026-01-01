@@ -15,7 +15,7 @@ const Offer: React.FC = () => {
 
           <div className="mb-8 md:mb-10">
             <span className="text-lg md:text-2xl text-red-500 line-through font-bold opacity-60 block">De R$ 97,00</span>
-            <span className="text-5xl md:text-8xl font-black text-pink-600 block my-1 md:my-2">R$ 19,90</span>
+            <span className="text-5xl md:text-8xl font-black text-pink-600 block my-1 md:my-2">R$ 14,90</span>
             <span className="text-sm md:text-xl font-bold text-gray-400 block uppercase tracking-widest">Pagamento Único</span>
           </div>
 

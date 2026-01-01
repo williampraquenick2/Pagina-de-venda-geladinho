@@ -24,8 +24,8 @@ const CTA: React.FC = () => {
           onClick={scrollToOffer}
           className="w-full md:w-auto bg-pink-600 text-white font-black px-6 py-4 md:px-12 md:py-4 rounded-xl text-base md:text-lg uppercase shadow-xl hover:bg-pink-700 active:scale-95 transition-all animate-pulse"
         >
-          <span className="md:hidden">GARANTIR VAGA POR R$ 19,90</span>
-          <span className="hidden md:inline">Garanta sua vaga por R$ 19,90</span>
+          <span className="md:hidden">GARANTIR VAGA POR R$ 14,90</span>
+          <span className="hidden md:inline">Garanta sua vaga por R$ 14,90</span>
         </button>
       </div>
     </div>
