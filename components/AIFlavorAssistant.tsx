@@ -41,7 +41,6 @@ const AIFlavorAssistant: React.FC = () => {
                 <h3 className="text-2xl md:text-4xl font-black uppercase tracking-tight relative z-10 drop-shadow-md">
                   Morango Premium com Vodka & Chantilly
                 </h3>
-                {/* SELO CORRIGIDO AQUI */}
                 <div className="mt-4 relative z-10 flex justify-center">
                   <span className="bg-white text-pink-600 px-4 py-1.5 rounded-full font-black text-[11px] uppercase tracking-wider shadow-lg border border-pink-100 flex items-center gap-2">
                     <span className="text-sm">📖</span> Extraído da Página 14 do Ebook
@@ -88,7 +87,6 @@ const AIFlavorAssistant: React.FC = () => {
                        </p>
                     </div>
                     
-                    {/* Efeito de Corte Visual */}
                     <div className="relative mt-6">
                        <div className="p-5 bg-white/60 backdrop-blur-[4px] border-2 border-dashed border-orange-200 rounded-2xl text-center">
                           <span className="text-[11px] font-black text-orange-600 uppercase tracking-widest">
@@ -108,11 +106,10 @@ const AIFlavorAssistant: React.FC = () => {
                       Abordagem de Alto Impacto:
                     </h4>
                     <p className="text-lg font-black text-gray-900 italic leading-snug">
-                      "Amigo, olha a cor desse Morango Premium! É o único dos blocos feito com a técnica de cremosidade absoluta... Se você provar esse, não vai conseguir..."
+                      "Amigo, olha a cor desse Morango Premium! É o único dos blocos feito com a técnica de cremosidade absoluta..."
                     </p>
                   </div>
 
-                  {/* SEÇÃO DO SEGREDO BLOQUEADA */}
                   <div className="bg-gradient-to-br from-yellow-400 to-orange-400 p-6 rounded-3xl border-4 border-white shadow-xl relative overflow-hidden">
                      <div className="relative z-10 text-white">
                         <h4 className="text-black font-black uppercase text-[10px] mb-2 tracking-widest">
@@ -122,7 +119,7 @@ const AIFlavorAssistant: React.FC = () => {
                           Aqui vai o grande segredo que faz você lucrar até 4x mais:
                         </p>
                         <div className="blur-[6px] select-none text-black font-black text-sm">
-                          Para o sacolé não congelar como uma pedra de gelo, você precisa adicionar exatamente 2g de... por litro de calda. Isso garante a textura de sorvete de massa que...
+                          Para o sacolé não congelar como uma pedra de gelo...
                         </div>
                      </div>
                      
@@ -141,9 +138,9 @@ const AIFlavorAssistant: React.FC = () => {
                     </p>
                     <button 
                       onClick={scrollToOffer}
-                      className="w-full bg-pink-600 text-white py-4 rounded-2xl font-black text-base uppercase tracking-widest hover:bg-pink-700 transition-all shadow-lg animate-pulse"
+                      className="w-full bg-pink-600 text-white py-4 rounded-2xl font-black text-base uppercase tracking-widest shadow-[0_5px_0_rgb(157,23,77)] hover:shadow-[0_2px_0_rgb(157,23,77)] hover:translate-y-[3px] active:shadow-none active:translate-y-[5px] transition-all border-2 border-pink-700"
                     >
-                      Quero o Ebook por R$ 14,90
+                      Ebook por R$ 14,90
                     </button>
                   </div>
                 </div>

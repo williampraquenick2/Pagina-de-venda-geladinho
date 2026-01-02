@@ -22,7 +22,7 @@ const CTA: React.FC = () => {
         
         <button 
           onClick={scrollToOffer}
-          className="w-full md:w-auto bg-pink-600 text-white font-black px-6 py-4 md:px-12 md:py-4 rounded-xl text-base md:text-lg uppercase shadow-xl hover:bg-pink-700 active:scale-95 transition-all animate-pulse"
+          className="w-full md:w-auto bg-pink-600 text-white font-black px-6 py-4 md:px-12 md:py-4 rounded-xl text-base md:text-lg uppercase shadow-[0_5px_0_rgb(157,23,77)] hover:shadow-[0_2px_0_rgb(157,23,77)] hover:translate-y-[3px] active:shadow-none active:translate-y-[5px] transition-all animate-[pulse_3s_infinite] border-2 border-pink-700"
         >
           <span className="md:hidden">GARANTIR VAGA POR R$ 14,90</span>
           <span className="hidden md:inline">Garanta sua vaga por R$ 14,90</span>
