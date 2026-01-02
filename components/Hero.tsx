@@ -15,6 +15,9 @@ const Hero: React.FC = () => {
     setIsMuted(false);
   };
 
+  // Video ID atualizado conforme solicitado
+  const videoId = "1150933010";
+
   return (
     <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center pt-8 pb-16 px-4 md:px-6 overflow-hidden carnival-gradient">
       {/* Background Decorative Elements */}
@@ -41,8 +44,10 @@ const Hero: React.FC = () => {
         <div className="mb-8 md:mb-10 max-w-sm md:max-w-2xl mx-auto transform hover:scale-[1.01] transition-transform duration-500 px-4 relative group">
           <div className="aspect-video w-full rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white/20 bg-black/20 relative">
             
+            {/* Camada Invisível para bloquear interação (impede pausa/avanço/pulo) */}
             <div className="absolute inset-0 z-20 cursor-default"></div>
 
+            {/* Botão de Ativar Áudio - Aparece apenas se estiver mudo */}
             {isMuted && (
               <button 
                 onClick={toggleAudio}
@@ -56,7 +61,7 @@ const Hero: React.FC = () => {
             )}
 
             <iframe 
-              src={`https://player.vimeo.com/video/1150857918?autoplay=1&muted=${isMuted ? '1' : '0'}&loop=1&controls=0&autopause=0&background=${isMuted ? '1' : '0'}&app_id=58479`} 
+              src={`https://player.vimeo.com/video/${videoId}?autoplay=1&muted=${isMuted ? '1' : '0'}&loop=1&controls=0&autopause=0&background=1&app_id=58479`} 
               className="w-full h-full scale-[1.05]" 
               frameBorder="0" 
               allow="autoplay; fullscreen; picture-in-picture" 
@@ -74,7 +79,7 @@ const Hero: React.FC = () => {
           </button>
         </div>
 
-        {/* Benefícios Atualizados - Menos transparentes e mais bonitos */}
+        {/* Benefícios Atualizados - Mantendo o estilo sólido e premium solicitado */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 px-4 max-w-4xl mx-auto">
           <div className="bg-white p-3 md:p-5 rounded-2xl border-b-4 border-orange-200 shadow-xl flex items-center justify-center gap-3 text-[12px] md:text-[15px] font-extrabold text-gray-900 transform hover:-translate-y-1 transition-transform">
             <span className="text-orange-500 bg-orange-50 w-7 h-7 flex items-center justify-center rounded-full shadow-inner">✔️</span>
