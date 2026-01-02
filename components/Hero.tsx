@@ -75,7 +75,7 @@ const Hero: React.FC = () => {
             onClick={scrollToOffer}
             className="w-full md:w-auto px-10 py-5 md:px-14 md:py-6 bg-yellow-400 text-black font-black text-xl md:text-2xl rounded-2xl shadow-[0_8px_0_rgb(202,138,4)] hover:shadow-[0_4px_0_rgb(202,138,4)] hover:translate-y-[4px] active:shadow-none active:translate-y-[8px] transition-all uppercase tracking-tight cursor-pointer animate-[pulse_3s_infinite] border-2 border-yellow-500"
           >
-            Quero fazer de 2 a 3 mil no Carnaval
+            Quero fazer dinheiro no Carnaval
           </button>
         </div>
 
