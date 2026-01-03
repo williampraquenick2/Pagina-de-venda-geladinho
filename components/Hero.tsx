@@ -1,15 +1,12 @@
 
 import React, { useState } from 'react';
 
-const Hero: React.FC = () => {
-  const [isMuted, setIsMuted] = useState(true);
+interface HeroProps {
+  onPurchaseClick: () => void;
+}
 
-  const scrollToOffer = () => {
-    const offerElement = document.getElementById('offer-card');
-    if (offerElement) {
-      offerElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  };
+const Hero: React.FC<HeroProps> = ({ onPurchaseClick }) => {
+  const [isMuted, setIsMuted] = useState(true);
 
   const toggleAudio = () => {
     setIsMuted(false);
@@ -72,14 +69,16 @@ const Hero: React.FC = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 px-4 mb-10">
           <button 
-            onClick={scrollToOffer}
+            onClick={() => {
+              const el = document.getElementById('offer');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
             className="w-full md:w-auto px-10 py-5 md:px-14 md:py-6 bg-yellow-400 text-black font-black text-xl md:text-2xl rounded-2xl shadow-[0_8px_0_rgb(202,138,4)] hover:shadow-[0_4px_0_rgb(202,138,4)] hover:translate-y-[4px] active:shadow-none active:translate-y-[8px] transition-all uppercase tracking-tight cursor-pointer animate-[pulse_3s_infinite] border-2 border-yellow-500"
           >
             Quero fazer dinheiro no Carnaval
           </button>
         </div>
 
-        {/* Benefícios Atualizados - Mantendo o estilo sólido e premium solicitado */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 px-4 max-w-4xl mx-auto">
           <div className="bg-white p-3 md:p-5 rounded-2xl border-b-4 border-orange-200 shadow-xl flex items-center justify-center gap-3 text-[12px] md:text-[15px] font-extrabold text-gray-900 transform hover:-translate-y-1 transition-transform">
             <span className="text-orange-500 bg-orange-50 w-7 h-7 flex items-center justify-center rounded-full shadow-inner">✔️</span>

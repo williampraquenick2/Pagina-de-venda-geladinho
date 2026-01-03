@@ -1,7 +1,11 @@
 
 import React from 'react';
 
-const Offer: React.FC = () => {
+interface OfferProps {
+  onPurchaseClick: () => void;
+}
+
+const Offer: React.FC<OfferProps> = ({ onPurchaseClick }) => {
   return (
     <section id="offer" className="py-16 md:py-24 px-4 bg-gray-900 text-white">
       <div className="max-w-4xl mx-auto">
@@ -15,7 +19,7 @@ const Offer: React.FC = () => {
 
           <div className="mb-8 md:mb-10">
             <span className="text-lg md:text-2xl text-red-500 line-through font-bold opacity-60 block">De R$ 97,00</span>
-            <span className="text-6xl md:text-8xl font-black text-pink-600 block my-1 md:my-2">R$ 14,90</span>
+            <span className="text-6xl md:text-8xl font-black text-pink-600 block my-1 md:my-2">R$ 9,90</span>
             <span className="text-sm md:text-xl font-bold text-gray-400 block uppercase tracking-widest">Pagamento Único</span>
           </div>
 
@@ -38,12 +42,12 @@ const Offer: React.FC = () => {
             </li>
           </ul>
 
-          <a 
-            href="https://pay.cakto.com.br/q5n674x_703600"
-            className="block w-full bg-pink-600 text-white font-black py-5 md:py-6 rounded-2xl text-xl md:text-3xl uppercase shadow-[0_8px_0_rgb(157,23,77)] hover:shadow-[0_4px_0_rgb(157,23,77)] hover:translate-y-[4px] active:shadow-none active:translate-y-[8px] transition-all mb-6 text-center no-underline border-2 border-pink-700"
+          <button 
+            onClick={onPurchaseClick}
+            className="block w-full bg-pink-600 text-white font-black py-5 md:py-6 rounded-2xl text-xl md:text-3xl uppercase shadow-[0_8px_0_rgb(157,23,77)] hover:shadow-[0_4px_0_rgb(157,23,77)] hover:translate-y-[4px] active:shadow-none active:translate-y-[8px] transition-all mb-6 text-center border-2 border-pink-700"
           >
             Quero começar agora!
-          </a>
+          </button>
 
           <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 opacity-50 px-4">
             <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" className="grayscale h-4 md:h-5" />

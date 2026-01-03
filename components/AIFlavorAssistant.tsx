@@ -1,14 +1,11 @@
 
 import React from 'react';
 
-const AIFlavorAssistant: React.FC = () => {
-  const scrollToOffer = () => {
-    const offerElement = document.getElementById('offer-card');
-    if (offerElement) {
-      offerElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-  };
+interface AIFlavorAssistantProps {
+  onPurchaseClick: () => void;
+}
 
+const AIFlavorAssistant: React.FC<AIFlavorAssistantProps> = ({ onPurchaseClick }) => {
   return (
     <section className="py-20 px-4 bg-gray-50 relative overflow-hidden">
       <div className="max-w-4xl mx-auto relative z-10">
@@ -143,7 +140,7 @@ const AIFlavorAssistant: React.FC = () => {
                      </div>
                      
                      <button 
-                        onClick={scrollToOffer}
+                        onClick={onPurchaseClick}
                         className="relative z-10 w-full bg-black text-white py-4 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-gray-800 transition-all shadow-lg flex items-center justify-center gap-2 animate-bounce mt-2"
                       >
                         LIBERAR ACESSO AGORA
@@ -155,10 +152,10 @@ const AIFlavorAssistant: React.FC = () => {
                       QUER AS +30 ESTRATÉGIAS?
                     </p>
                     <button 
-                      onClick={scrollToOffer}
+                      onClick={onPurchaseClick}
                       className="w-full bg-pink-600 text-white py-4 rounded-2xl font-black text-base uppercase tracking-widest shadow-[0_5px_0_rgb(157,23,77)] hover:shadow-[0_2px_0_rgb(157,23,77)] hover:translate-y-[3px] active:shadow-none active:translate-y-[5px] transition-all border-2 border-pink-700"
                     >
-                      APENAS R$ 14,90
+                      APENAS R$ 9,90
                     </button>
                   </div>
                 </div>
