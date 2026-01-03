@@ -1,110 +1,55 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const Authority: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const images = [
-    "https://i.imgur.com/3sathKg.jpeg",
-    "https://i.imgur.com/mTsq5w9.jpeg",
-    "https://i.imgur.com/SBdxcTA.jpeg",
-    "https://i.imgur.com/lV7tHox.jpeg"
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % images.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [images.length]);
-
   const pains = [
-    "Sente pressão para conseguir renda extra urgente",
-    "Quer aproveitar o Carnaval, mas não sabe o que vender",
-    "Acredita que precisa de muito dinheiro para começar",
-    "Tem medo de investir e perder o pouco que tem",
-    "Já tentou outras formas de ganhar dinheiro e se frustrou"
+    "Vê o Carnaval passar e continua com as contas apertadas",
+    "Tem vontade de empreender mas morre de medo de perder dinheiro",
+    "Acha que precisa de uma estrutura gigante para começar",
+    "Já tentou vender algo e sentiu vergonha ou não soube o que falar"
   ];
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-16 md:py-24 px-4 bg-white">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-            Você não está sem sorte. <br/><span className="text-pink-600">Está sem o método certo.</span>
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-6xl font-black text-gray-900 mb-6 leading-tight tracking-tighter uppercase">
+            O Carnaval é uma <span className="text-pink-600 italic">máquina de dinheiro</span>, mas você está apenas assistindo.
           </h2>
-          <p className="text-lg text-gray-600 leading-relaxed">
-            Todos os anos é a mesma cena: ruas lotadas, blocos cheios, pessoas felizes — e dinheiro circulando o tempo todo. 
-            Enquanto muitos lucram, a maioria apenas assiste as oportunidades passarem.
+          <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-medium">
+            Enquanto milhões de reais circulam nos blocos, 99% das pessoas continuam sem um plano real. O problema não é a crise, é a falta de um <span className="font-bold text-black underline">processo validado</span>.
           </p>
         </div>
 
-        <div className="bg-gray-50 rounded-3xl p-8 md:p-12 border border-gray-100 shadow-sm mb-16">
-          <p className="text-xl font-bold text-gray-800 mb-6">Talvez você se reconheça aqui:</p>
-          <ul className="space-y-4">
-            {pains.map((pain, idx) => (
-              <li key={idx} className="flex items-start gap-4">
-                <span className="text-pink-500 text-xl">❌</span>
-                <span className="text-gray-700 md:text-lg">{pain}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-8 text-xl font-bold text-pink-600">👉 Isso não é falta de capacidade. É falta de direção.</p>
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          <div className="bg-gray-50 rounded-[2rem] p-8 md:p-10 border border-gray-100 shadow-sm flex flex-col justify-center">
+            <p className="text-xl font-black text-gray-900 mb-6 uppercase tracking-tight">O que te trava hoje:</p>
+            <ul className="space-y-4">
+              {pains.map((pain, idx) => (
+                <li key={idx} className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-red-600 text-xs font-bold">✕</span>
+                  </div>
+                  <span className="text-gray-700 font-bold leading-tight">{pain}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        <div className="text-center">
-          <div className="inline-block p-1 carnival-gradient rounded-3xl shadow-2xl w-full">
-            <div className="bg-white px-6 py-10 md:px-8 md:py-12 rounded-[1.4rem]">
-              <h3 className="text-3xl md:text-4xl font-black text-pink-600 mb-4 uppercase tracking-tighter">Método Sacolé Lucrativo™</h3>
-              <p className="text-lg text-gray-600 mb-8 font-medium">
-                Validado na prática. Criado para iniciantes. Focado em resultado real.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-10">
-                <div className="bg-pink-50 p-6 rounded-2xl border border-pink-100 group hover:bg-pink-100 transition-colors">
-                  <span className="block font-black text-pink-700 text-lg mb-1 uppercase">🧠 Estratégias Reais</span>
-                  <span className="text-sm text-pink-800/80">Baseado no que vendedores ambulantes experientes usam todos os anos para dominar as ruas.</span>
-                </div>
-                <div className="bg-yellow-50 p-6 rounded-2xl border border-yellow-100 group hover:bg-yellow-100 transition-colors">
-                  <span className="block font-black text-orange-700 text-lg mb-1 uppercase">🍹 Mix Alcoólico Premium</span>
-                  <span className="text-sm text-orange-800/80">Receitas secretas que as pessoas procuram desesperadamente no calor intenso dos blocos.</span>
-                </div>
+          <div className="carnival-gradient rounded-[2rem] p-8 md:p-10 shadow-xl flex flex-col justify-center text-white relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-3xl -mr-16 -mt-16"></div>
+            <h3 className="text-2xl md:text-3xl font-black mb-4 uppercase leading-none tracking-tighter">
+              A Virada de Chave: <br/><span className="text-yellow-300">Sacolé Lucrativo™</span>
+            </h3>
+            <p className="text-sm md:text-base mb-6 opacity-90 leading-relaxed font-bold">
+              Nós transformamos a maior festa do mundo em lucro no seu bolso. Sem segredos, sem enrolação. Apenas o que funciona na rua, no calor do momento.
+            </p>
+            <div className="flex items-center gap-4 bg-black/20 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
+              <span className="text-3xl">🚀</span>
+              <div>
+                <p className="font-black text-sm uppercase leading-none">Início Imediato</p>
+                <p className="text-[10px] opacity-70 font-bold uppercase">Comece a produzir hoje mesmo.</p>
               </div>
-
-              {/* Image Carousel - Ajustado para exibir imagens inteiras */}
-              <div className="relative group overflow-hidden rounded-2xl shadow-lg aspect-square sm:aspect-video bg-gray-50 border border-gray-100">
-                <div 
-                  className="flex transition-transform duration-700 ease-in-out h-full"
-                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-                >
-                  {images.map((img, idx) => (
-                    <div key={idx} className="min-w-full h-full flex items-center justify-center p-2">
-                      <img 
-                        src={img} 
-                        alt={`Sacolé Exemplo ${idx + 1}`} 
-                        className="max-w-full max-h-full object-contain rounded-xl"
-                      />
-                    </div>
-                  ))}
-                </div>
-                
-                {/* Dots Navigation */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
-                  {images.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setCurrentSlide(idx)}
-                      className={`w-2.5 h-2.5 rounded-full transition-all ${
-                        currentSlide === idx ? 'bg-pink-600 w-6' : 'bg-pink-200'
-                      }`}
-                      aria-label={`Go to slide ${idx + 1}`}
-                    />
-                  ))}
-                </div>
-              </div>
-              
-              <p className="mt-6 text-sm text-gray-400 font-medium italic">
-                Aprenda a produzir sacolés irresistíveis como estes e lucre muito.
-              </p>
             </div>
           </div>
         </div>

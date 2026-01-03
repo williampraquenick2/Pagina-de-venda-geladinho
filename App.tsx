@@ -2,9 +2,6 @@
 import React, { useState } from 'react';
 import Hero from './components/Hero.tsx';
 import Authority from './components/Authority.tsx';
-import Benefits from './components/Benefits.tsx';
-import Content from './components/Content.tsx';
-import Bonus from './components/Bonus.tsx';
 import Offer from './components/Offer.tsx';
 import Guarantee from './components/Guarantee.tsx';
 import FAQ from './components/FAQ.tsx';
@@ -22,20 +19,28 @@ const App: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Hero onPurchaseClick={openModal} />
+      
+      {/* Toque na dor e Autoridade do Método */}
       <Authority />
-      <Benefits />
-      <Content />
-      <Testimonials />
+      
+      {/* Amostra real do conteúdo (O que o usuário gostou) */}
       <AIFlavorAssistant onPurchaseClick={openModal} />
-      <Bonus />
+      
+      {/* Prova Social */}
+      <Testimonials />
+      
+      {/* Oferta Direta com resumo de bônus incluso */}
       <Offer onPurchaseClick={openModal} />
+      
+      {/* Quebra de Objeções e Garantia */}
       <Guarantee />
       <FAQ />
+      
       <CTA onPurchaseClick={openModal} />
       
       <PremiumModal isOpen={isModalOpen} onClose={closeModal} />
 
-      <footer className="bg-gray-900 text-white py-12 text-center px-6">
+      <footer className="bg-gray-900 text-white py-12 text-center px-6 border-t border-white/10">
         <p className="text-xs md:text-sm opacity-60 max-w-2xl mx-auto leading-relaxed">
           © 2026 Sacolé Lucrativo™. Todos os direitos reservados.
           <br className="hidden md:block" />
